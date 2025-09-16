@@ -1,2 +1,2 @@
 # CapeTown_Countdown
-Counrtdown to Cape Town
+Countdown to Cape Town
