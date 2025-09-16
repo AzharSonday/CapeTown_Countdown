@@ -30,18 +30,29 @@
       margin-top: 1rem;
     }
 
-    /* --- New gallery styles --- */
+    /* --- Optimized small gallery --- */
     .gallery {
-      margin-top: 40px;
+      margin-top: 30px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* smaller thumbnails */
+      gap: 10px;
+      padding: 10px;
+      justify-items: center; /* center images in each grid cell */
     }
+
     .gallery img {
       width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+      max-width: 120px; /* ensures images don't get too big */
+      height: auto; /* maintain aspect ratio */
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05); /* subtle zoom on hover */
+      box-shadow: 0 6px 15px rgba(0,0,0,0.6);
     }
   </style>
 </head>
@@ -49,7 +60,7 @@
   <h1>Countdown to Cape Town 🌞!</h1>
   <div id="countdown">Loading...</div>
 
-  <!-- 🔹 Image gallery goes here -->
+  <!-- 🔹 Image gallery -->
   <div class="gallery">
     <img src="images/20250816_182712.jpg" alt="Cape Town 1" />
     <img src="images/20250806_091935.jpg" alt="Cape Town 2" />
