@@ -9,10 +9,10 @@
       margin: 0;
       padding: 0;
       font-family: "Segoe UI", sans-serif;
-      background: url('https://www.vacationpass.com/wp-content/uploads/Cape-Town-Table-Mountain-Depositphotos_128313588_original.jpg') no-repeat center center/cover;
+      background: url('images/table-mountain.jpg') no-repeat center center/cover;
       color: white;
       text-align: center;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -29,11 +29,32 @@
       font-size: 2rem;
       margin-top: 1rem;
     }
+
+    /* --- New gallery styles --- */
+    .gallery {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
   </style>
 </head>
 <body>
-  <h1>Days to Cape Town 🌞!</h1>
+  <h1>Countdown to Cape Town 🌞!</h1>
   <div id="countdown">Loading...</div>
+
+  <!-- 🔹 Image gallery goes here -->
+  <div class="gallery">
+    <img src="images/table-mountain.jpg" alt="Cape Town 1" />
+    <img src="images/cape-town-sunset.jpg" alt="Cape Town 2" />
+    <img src="images/waterfront.jpg" alt="Cape Town 3" />
+  </div>
 
   <script>
     // Set the target date
@@ -67,4 +88,3 @@
   </script>
 </body>
 </html>
-
